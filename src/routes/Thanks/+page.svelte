@@ -1,1 +1,1 @@
-<p>thanks!</p>
+<p>thanks</p>

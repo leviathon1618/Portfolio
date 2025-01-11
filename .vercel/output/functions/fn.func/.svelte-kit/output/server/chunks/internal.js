@@ -1413,11 +1413,7 @@ const options = {
   root,
   service_worker: false,
   templates: {
-    app: ({ head, body, assets: assets2, nonce, env }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets2 + `/favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="Content-Security-Policy"
-			content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:">
-		` + head + `
+    app: ({ head, body, assets: assets2, nonce, env }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets2 + '/favicon.png" />\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		' + head + `
 		<meta name="description"
 			content="I am a highly motivated and skilled professional with a passion for creating innovative and impactful solutions. I have a strong foundation in C#,HTML,CSS,Unity,Javascript and I am always looking for new challenges and opportunities to learn and grow. I am confident that I can make a significant contribution to any team 1  I join">
 		<title>Levi's Portfolio</title>
@@ -1495,7 +1491,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "ehinau"
+  version_hash: "1pz1sho"
 };
 async function get_hooks() {
   let handle;

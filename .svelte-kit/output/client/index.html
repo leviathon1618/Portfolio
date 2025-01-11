@@ -4,16 +4,16 @@
 	import ResumeSection from "./ResumeSection.svelte";
 	import ReviewSection from "./ReviewSection.svelte";
 	import ContactSection from "./ContactSection.svelte";
-	import "@fontsource/roboto"; 
-		export async function OPTIONS() {
-			return new Response(null, {
-				headers: {
-					"Access-Control-Allow-Origin": "https://trello.com",
-					"Access-Control-Allow-Methods": "POST, OPTIONS",
-					"Access-Control-Allow-Headers": "Content-Type",
-				},
-			});
-		}
+	// import "@fontsource/roboto"; 
+	export async function OPTIONS() {
+		return new Response(null, {
+			headers: {
+				"Access-Control-Allow-Origin": "https://trello.com",
+				"Access-Control-Allow-Methods": "POST, OPTIONS",
+				"Access-Control-Allow-Headers": "Content-Type",
+			},
+		});
+	}
 </script>
 <!doctype html>
 <html lang="en">

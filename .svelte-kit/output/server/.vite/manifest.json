@@ -35,54 +35,6 @@
       "_index.js"
     ]
   },
-  "node_modules/@fontsource/roboto/files/roboto-cyrillic-400-normal.woff": {
-    "file": "_app/immutable/assets/roboto-cyrillic-400-normal.JN0iKxGs.woff",
-    "src": "node_modules/@fontsource/roboto/files/roboto-cyrillic-400-normal.woff"
-  },
-  "node_modules/@fontsource/roboto/files/roboto-cyrillic-400-normal.woff2": {
-    "file": "_app/immutable/assets/roboto-cyrillic-400-normal.BiRJyiea.woff2",
-    "src": "node_modules/@fontsource/roboto/files/roboto-cyrillic-400-normal.woff2"
-  },
-  "node_modules/@fontsource/roboto/files/roboto-cyrillic-ext-400-normal.woff": {
-    "file": "_app/immutable/assets/roboto-cyrillic-ext-400-normal.b0JluIOJ.woff",
-    "src": "node_modules/@fontsource/roboto/files/roboto-cyrillic-ext-400-normal.woff"
-  },
-  "node_modules/@fontsource/roboto/files/roboto-cyrillic-ext-400-normal.woff2": {
-    "file": "_app/immutable/assets/roboto-cyrillic-ext-400-normal.D76n7Daw.woff2",
-    "src": "node_modules/@fontsource/roboto/files/roboto-cyrillic-ext-400-normal.woff2"
-  },
-  "node_modules/@fontsource/roboto/files/roboto-greek-400-normal.woff": {
-    "file": "_app/immutable/assets/roboto-greek-400-normal.IIc_WWwF.woff",
-    "src": "node_modules/@fontsource/roboto/files/roboto-greek-400-normal.woff"
-  },
-  "node_modules/@fontsource/roboto/files/roboto-greek-400-normal.woff2": {
-    "file": "_app/immutable/assets/roboto-greek-400-normal.LPh2sqOm.woff2",
-    "src": "node_modules/@fontsource/roboto/files/roboto-greek-400-normal.woff2"
-  },
-  "node_modules/@fontsource/roboto/files/roboto-latin-400-normal.woff": {
-    "file": "_app/immutable/assets/roboto-latin-400-normal.BVyCgWwA.woff",
-    "src": "node_modules/@fontsource/roboto/files/roboto-latin-400-normal.woff"
-  },
-  "node_modules/@fontsource/roboto/files/roboto-latin-400-normal.woff2": {
-    "file": "_app/immutable/assets/roboto-latin-400-normal.DXyFPIdK.woff2",
-    "src": "node_modules/@fontsource/roboto/files/roboto-latin-400-normal.woff2"
-  },
-  "node_modules/@fontsource/roboto/files/roboto-latin-ext-400-normal.woff": {
-    "file": "_app/immutable/assets/roboto-latin-ext-400-normal.BSFkPfbf.woff",
-    "src": "node_modules/@fontsource/roboto/files/roboto-latin-ext-400-normal.woff"
-  },
-  "node_modules/@fontsource/roboto/files/roboto-latin-ext-400-normal.woff2": {
-    "file": "_app/immutable/assets/roboto-latin-ext-400-normal.DgXbz5gU.woff2",
-    "src": "node_modules/@fontsource/roboto/files/roboto-latin-ext-400-normal.woff2"
-  },
-  "node_modules/@fontsource/roboto/files/roboto-vietnamese-400-normal.woff": {
-    "file": "_app/immutable/assets/roboto-vietnamese-400-normal.D5pJwT9g.woff",
-    "src": "node_modules/@fontsource/roboto/files/roboto-vietnamese-400-normal.woff"
-  },
-  "node_modules/@fontsource/roboto/files/roboto-vietnamese-400-normal.woff2": {
-    "file": "_app/immutable/assets/roboto-vietnamese-400-normal.DhTUfTw_.woff2",
-    "src": "node_modules/@fontsource/roboto/files/roboto-vietnamese-400-normal.woff2"
-  },
   "node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte": {
     "file": "entries/fallbacks/error.svelte.js",
     "name": "entries/fallbacks/error.svelte",
@@ -124,21 +76,7 @@
       "_escaping.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.DBhTk5sQ.css"
-    ],
-    "assets": [
-      "_app/immutable/assets/roboto-cyrillic-ext-400-normal.D76n7Daw.woff2",
-      "_app/immutable/assets/roboto-cyrillic-ext-400-normal.b0JluIOJ.woff",
-      "_app/immutable/assets/roboto-cyrillic-400-normal.BiRJyiea.woff2",
-      "_app/immutable/assets/roboto-cyrillic-400-normal.JN0iKxGs.woff",
-      "_app/immutable/assets/roboto-greek-400-normal.LPh2sqOm.woff2",
-      "_app/immutable/assets/roboto-greek-400-normal.IIc_WWwF.woff",
-      "_app/immutable/assets/roboto-vietnamese-400-normal.DhTUfTw_.woff2",
-      "_app/immutable/assets/roboto-vietnamese-400-normal.D5pJwT9g.woff",
-      "_app/immutable/assets/roboto-latin-ext-400-normal.DgXbz5gU.woff2",
-      "_app/immutable/assets/roboto-latin-ext-400-normal.BSFkPfbf.woff",
-      "_app/immutable/assets/roboto-latin-400-normal.DXyFPIdK.woff2",
-      "_app/immutable/assets/roboto-latin-400-normal.BVyCgWwA.woff"
+      "_app/immutable/assets/_page.NrKbohAF.css"
     ]
   },
   "src/routes/Thanks/+page.svelte": {

@@ -1,6 +1,6 @@
 <script>
   import SkillBar from "./Skill_Bar.svelte";
-  import "@fontsource/roboto"; 
+  // import "@fontsource/roboto"; 
   
   // Check if the current environment is a browser
 		const isBrowser = typeof window !== 'undefined';

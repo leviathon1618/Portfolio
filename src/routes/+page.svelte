@@ -4,7 +4,7 @@
   import ResumeSection from "./ResumeSection.svelte";
   import ReviewSection from "./ReviewSection.svelte";
   import ContactSection from "./ContactSection.svelte";
-  import "@fontsource/roboto"; 
+  // import "@fontsource/roboto"; 
   export async function OPTIONS() {
     return new Response(null, {
       headers: {

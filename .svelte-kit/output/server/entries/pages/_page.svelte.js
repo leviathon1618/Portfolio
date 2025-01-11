@@ -1,6 +1,6 @@
 import { d as bind_props, e as stringify, c as pop, p as push } from "../../chunks/index.js";
-import { e as escape_html } from "../../chunks/escaping.js";
 import "clsx";
+import { e as escape_html } from "../../chunks/escaping.js";
 const replacements = {
   translate: /* @__PURE__ */ new Map([
     [true, "yes"],
@@ -19,8 +19,12 @@ function Skill_Bar($$payload, $$props) {
   $$payload.out += `<div><p style="font-weight: 0; margin-top:0px;margin-bottom:0px" class="svelte-1bacsde">${escape_html(bar_name)}</p> <input${attr("style", `width:100%;background-color: #96bb7c; clip-path: polygon(0 0, ${stringify(bar_value)}% 0, ${stringify(bar_value)}% 100%, 0 100%);`)}${attr("aria-label", bar_name)} type="range"${attr("id", `volume ${stringify(bar_name)}`)} name="volume" min="0" max="100" class="svelte-1bacsde"> <div${attr("style", `margin-left:calc(${stringify(bar_value)}% - 10px); background:#96bb7c; width:15px;height:15px;transform:rotate(45deg);`)}></div> <div${attr("style", `margin-left:calc(${stringify(bar_value)}% - 23px);margin-top:-25px; background:#96bb7c; width:40px;height:20px;z-index: 1; position:relative`)}><p style="padding-top:2px;color:black; text-align:center;font-size:0.8em" class="svelte-1bacsde">${escape_html(bar_value)}%</p></div></div>`;
   bind_props($$props, { bar_name, bar_value });
 }
-function Bio_Section($$payload, $$props) {
-  let IsMobile = $$props["IsMobile"];
+function Bio_Section($$payload) {
+  const isBrowser = typeof window !== "undefined";
+  let IsMobile = true;
+  if (isBrowser && screen.width > 440) {
+    IsMobile = false;
+  }
   if (IsMobile) {
     $$payload.out += "<!--[-->";
     $$payload.out += `<div><div style="height:100vh"><h1 class="TopWords svelte-rzgw2q" style="">I'm Levi Delaney, <br>A full stack Developer test</h1> <div id="splash_background" class="svelte-rzgw2q"></div> <img class="splash_image svelte-rzgw2q" src="/splash_image.jpg" alt="background"></div> <div class="padding_outside svelte-rzgw2q" style="display:flex"><div><img style="width:70%;position:absolute" class="green_dots svelte-rzgw2q" src="/green_dots.webp" alt="dots_image"> <img class="profile_image svelte-rzgw2q" src=".\\first_image.jpg" alt="first_image"> <div style="float:right; padding-top:100px;"><div><h2 class="svelte-rzgw2q">My Bio</h2> <p class="svelte-rzgw2q">Detail-oriented, organized and meticulous employee. Works at fast
@@ -63,7 +67,6 @@ function Bio_Section($$payload, $$props) {
     $$payload.out += `<!----> <br> <a class="button svelte-rzgw2q" href="#contact_me">hire me</a> <a style="background:#6c757d;color:white" class="button svelte-rzgw2q" href="/Levi_Delaney_Resume.pdf" download="Levi Delaney Resume">download cv</a></div></div></div></div>`;
   }
   $$payload.out += `<!--]-->`;
-  bind_props($$props, { IsMobile });
 }
 function Image_Option($$payload, $$props) {
   let image_path = $$props["image_path"];
@@ -71,8 +74,12 @@ function Image_Option($$payload, $$props) {
   $$payload.out += `<div class="clip_box svelte-150ud9a" style="width:300px; height:200px;"><img class="scroll svelte-150ud9a" id="scroll_element"${attr("src", image_path)} style="width:300px;" alt="portfolio_image"> <div class="hidden_word svelte-150ud9a"><div class="hidden_word2 svelte-150ud9a"></div> <div class="portfolio_text_tile svelte-150ud9a"></div> <p class="svelte-150ud9a">${escape_html(image_name)}</p></div></div>`;
   bind_props($$props, { image_path, image_name });
 }
-function Portfolio_Section($$payload, $$props) {
-  let IsMobile = $$props["IsMobile"];
+function Portfolio_Section($$payload) {
+  const isBrowser = typeof window !== "undefined";
+  let IsMobile = true;
+  if (isBrowser && screen.width > 440) {
+    IsMobile = false;
+  }
   if (IsMobile) {
     $$payload.out += "<!--[-->";
     $$payload.out += `<div style="padding-top:50px"><h1 style="text-align:left;padding-left:15%" class="svelte-1mwsgww">My Portfolio</h1> <br> <div style="display: flex; justify-content:center" class="row svelte-1mwsgww"><div class="column svelte-1mwsgww">`;
@@ -151,7 +158,6 @@ function Portfolio_Section($$payload, $$props) {
     $$payload.out += `<!----></div></div></div>`;
   }
   $$payload.out += `<!--]-->`;
-  bind_props($$props, { IsMobile });
 }
 function Work_Experience_Section($$payload, $$props) {
   let job_title = $$props["job_title"];
@@ -259,9 +265,12 @@ function Work_Content($$payload, $$props) {
   $$payload.out += `<!--]-->`;
   bind_props($$props, { IsMobile });
 }
-function ResumeSection($$payload, $$props) {
-  let IsMobile = $$props["IsMobile"];
-  console.log("resume section mobile: " + IsMobile);
+function ResumeSection($$payload) {
+  const isBrowser = typeof window !== "undefined";
+  let IsMobile = true;
+  if (isBrowser && screen.width > 440) {
+    IsMobile = false;
+  }
   if (IsMobile) {
     $$payload.out += "<!--[-->";
     $$payload.out += `<h1 class="header svelte-9a224l" style="padding-top:50px;text-align:left;margin-left:15%">Resume</h1> <div style="display:flex;justify-content:center"><img style="width:350px" id="my_photo" src="/resume_image.jpg" alt="picture2"></div> <div class="padding_outside svelte-9a224l"><div><h1 id="work_experience" class="svelte-9a224l">Work Experience</h1> `;
@@ -310,7 +319,6 @@ function ResumeSection($$payload, $$props) {
     $$payload.out += `<!----></div></div>`;
   }
   $$payload.out += `<!--]-->`;
-  bind_props($$props, { IsMobile });
 }
 function Review_Tile($$payload, $$props) {
   let image_path = $$props["image_path"];
@@ -367,8 +375,12 @@ With Oscar's departure, I'm particularly looking forward - seeing Levi step up. 
   $$payload.out += `<!--]-->`;
   bind_props($$props, { image_path, review_text, IsMobile });
 }
-function ReviewSection($$payload, $$props) {
-  let IsMobile = $$props["IsMobile"];
+function ReviewSection($$payload) {
+  const isBrowser = typeof window !== "undefined";
+  let IsMobile = true;
+  if (isBrowser && screen.width > 440) {
+    IsMobile = false;
+  }
   if (IsMobile == true) {
     $$payload.out += "<!--[-->";
     $$payload.out += `<div style="padding:50px 15% 0px 15%;" class="header"><h1 class="svelte-2oyr2e">My Reviews</h1> <div>`;
@@ -425,7 +437,6 @@ function ReviewSection($$payload, $$props) {
     $$payload.out += `<!----></div></div>`;
   }
   $$payload.out += `<!--]-->`;
-  bind_props($$props, { IsMobile });
 }
 function Contact_Form($$payload) {
   $$payload.out += `<form style="width:100%;padding-right:50px" action="https://api.staticforms.xyz/submit" method="post"><input aria-label="access key" type="hidden" name="accessKey" value="c1586de7-c5d0-4167-a9e7-13f9e4d3bd15" class="svelte-mf0izm"> <div style="display:flex"><div style="width:100%; margin-right:35px;"><input placeholder="First name" aria-label="First Name" style="width:100%" type="text" name="name" class="svelte-mf0izm"></div> <div style="width:100%"><input placeholder="Last name" aria-label="Last Name" style="width:100%" type="text" name="last-name" class="svelte-mf0izm"></div></div> <input placeholder="Email" aria-label="Email Address" style="width:100%" type="text" name="email" class="svelte-mf0izm"> <textarea placeholder="Message" aria-label="message Box" style="width:100%" name="message" class="svelte-mf0izm"></textarea> <input type="text" style="display:none" name="replyTo" value="levidelaney2000@gmail.com" class="svelte-mf0izm"> <input type="hidden" name="replyTo" value="@" class="svelte-mf0izm"> <input type="hidden" name="redirectTo" value="https://www.levidelaney.com/" class="svelte-mf0izm"> <input id="send_message" aria-label="submit button" class="button svelte-mf0izm" type="submit" value="Send message"></form>`;
@@ -433,8 +444,12 @@ function Contact_Form($$payload) {
 function ContactInfo($$payload) {
   $$payload.out += `<div style="width:100%"><h2 class="svelte-4rbb7l">Contact Info</h2> <div class="InfoLine svelte-4rbb7l"><img class="scroll svelte-4rbb7l" id="scroll_element"${attr("src", "../address_icon.png")} alt="portfolio_image"> <p class="svelte-4rbb7l">58 Gaunt Street, Auckland CBD, Auckland 1010</p></div> <div class="InfoLine svelte-4rbb7l"><img class="scroll svelte-4rbb7l" id="scroll_element"${attr("src", "../phone_icon.png")} alt="portfolio_image"> <p class="svelte-4rbb7l">021-029-20282</p></div> <div class="InfoLine svelte-4rbb7l"><img class="scroll svelte-4rbb7l" id="scroll_element"${attr("src", "../email_icon.png")} alt="portfolio_image"> <p class="svelte-4rbb7l">levidelaney2000@gmail.com</p></div></div>`;
 }
-function ContactSection($$payload, $$props) {
-  let IsMobile = $$props["IsMobile"];
+function ContactSection($$payload) {
+  const isBrowser = typeof window !== "undefined";
+  let IsMobile = true;
+  if (isBrowser && screen.width > 440) {
+    IsMobile = false;
+  }
   if (IsMobile) {
     $$payload.out += "<!--[-->";
     $$payload.out += `<div style="padding-top:50px;padding-bottom:100px; justify-content:center;flex-direction:column;" class="padding_outside svelte-1ejiix" id="contact_me"><h1 class="svelte-1ejiix">Contact Me</h1> <div style="width:100%">`;
@@ -451,7 +466,6 @@ function ContactSection($$payload, $$props) {
     $$payload.out += `<!----></div></div>`;
   }
   $$payload.out += `<!--]-->`;
-  bind_props($$props, { IsMobile });
 }
 function _page($$payload, $$props) {
   push();
@@ -464,21 +478,16 @@ function _page($$payload, $$props) {
       }
     });
   }
-  const isBrowser = typeof window !== "undefined";
-  let isMobile = true;
-  if (isBrowser && screen.width > 440) {
-    isMobile = false;
-  }
   $$payload.out += `<main>`;
-  Bio_Section($$payload, { IsMobile: isMobile });
+  Bio_Section($$payload);
   $$payload.out += `<!----> `;
-  Portfolio_Section($$payload, { IsMobile: isMobile });
+  Portfolio_Section($$payload);
   $$payload.out += `<!----> `;
-  ResumeSection($$payload, { IsMobile: isMobile });
+  ResumeSection($$payload);
   $$payload.out += `<!----> `;
-  ReviewSection($$payload, { IsMobile: isMobile });
+  ReviewSection($$payload);
   $$payload.out += `<!----> `;
-  ContactSection($$payload, { IsMobile: isMobile });
+  ContactSection($$payload);
   $$payload.out += `<!----></main>`;
   bind_props($$props, { OPTIONS });
   pop();

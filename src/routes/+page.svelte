@@ -15,29 +15,21 @@
     });
   }
 
-// Check if the current environment is a browser
-const isBrowser = typeof window !== 'undefined'; 
-
-let isMobile = true;
-
-if (isBrowser && screen.width > 440) {
-  isMobile = false;
-}
 </script>
 
 <main>
   <!--bio section-->
-  <BioSection IsMobile={isMobile}></BioSection>
+  <BioSection></BioSection>
 
   <!--portfolio section-->
-  <PortfolioSection IsMobile={isMobile}></PortfolioSection>
+  <PortfolioSection></PortfolioSection>
 
   <!--resume section-->
-  <ResumeSection IsMobile={isMobile}></ResumeSection>
+  <ResumeSection></ResumeSection>
 
   <!--review section-->
-  <ReviewSection IsMobile={isMobile}></ReviewSection>
+  <ReviewSection></ReviewSection>
 
   <!--contact form-->
-  <ContactSection IsMobile={isMobile}></ContactSection>
+  <ContactSection></ContactSection>
 </main>

@@ -1,6 +1,13 @@
 <script>
   import ReviewTile from "./Review_Tile.svelte";
-  export let IsMobile;
+    // Check if the current environment is a browser
+		const isBrowser = typeof window !== 'undefined';
+
+		let IsMobile = true;
+
+		if (isBrowser && screen.width > 440) {
+			IsMobile = false;
+		}
 </script>
 
 {#if IsMobile == true}

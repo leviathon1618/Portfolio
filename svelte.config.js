@@ -13,7 +13,7 @@ const config = {
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter(),
 		files: {
-			appTemplate: 'static/index.html'
+			appTemplate: 'src/index.html'
 			// ... other file paths
 		}
 	}
